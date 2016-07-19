@@ -14,7 +14,7 @@ app.initializers.add('beeta-dev-ext-ads', function() {
         var ads = '<div class="ads1" style="width:100%;text-align:center;margin: 0 0 10px 0;"><!-- Beeta 2.0 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3763973333557675" data-ad-slot="1731508684" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
         $(".Hero .container").prepend( ads );
         setTimeout(function () {
-            $(".Hero .container").prepend( ads );
+            if($(".UserPage").html()==undefined){ $(".Hero .container").prepend( ads ); }
             if($(".TagsPage-nav").html()==undefined){ $(".sideNav").append( ads ); }
         }, 300);
     });
