@@ -1,14 +1,14 @@
-System.register('beeta-dev/ext-userinfo/main', ['flarum/extend', 'flarum/app', 'flarum/components/IndexPage'], function (_export) {
+System.register('beeta-dev/ext-userinfo/main', ['flarum/extend', 'flarum/app', 'flarum/components/Page'], function (_export) {
     'use strict';
 
-    var extend, app, IndexPage;
+    var extend, app, Page;
     return {
         setters: [function (_flarumExtend) {
             extend = _flarumExtend.extend;
         }, function (_flarumApp) {
             app = _flarumApp['default'];
-        }, function (_flarumComponentsIndexPage) {
-            IndexPage = _flarumComponentsIndexPage['default'];
+        }, function (_flarumComponentsPage) {
+            Page = _flarumComponentsPage['default'];
         }],
         execute: function () {
 
