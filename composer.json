@@ -3,7 +3,6 @@
     "description": "Beeta Ads",
     "keywords": ["ads"],
     "type": "flarum-extension",
-    "version": "0.2.0",
     "authors": [{
         "name": "blurkness",
         "email": "blurkness@gmail.com"
