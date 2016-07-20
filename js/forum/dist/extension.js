@@ -1,7 +1,7 @@
-System.register('beeta-dev/ext-ads/main', ['flarum/extend', 'flarum/app', 'flarum/components/WelcomeHero', 'flarum/components/DiscussionHero', 'flarum/components/HeaderPrimary'], function (_export) {
+System.register('beeta-dev/ext-ads/main', ['flarum/extend', 'flarum/app', 'flarum/components/WelcomeHero', 'flarum/components/DiscussionList', 'flarum/components/HeaderPrimary'], function (_export) {
     'use strict';
 
-    var extend, app, WelcomeHero, DiscussionHero, HeaderPrimary;
+    var extend, app, WelcomeHero, DiscussionList, HeaderPrimary;
     return {
         setters: [function (_flarumExtend) {
             extend = _flarumExtend.extend;
@@ -9,8 +9,8 @@ System.register('beeta-dev/ext-ads/main', ['flarum/extend', 'flarum/app', 'flaru
             app = _flarumApp['default'];
         }, function (_flarumComponentsWelcomeHero) {
             WelcomeHero = _flarumComponentsWelcomeHero['default'];
-        }, function (_flarumComponentsDiscussionHero) {
-            DiscussionHero = _flarumComponentsDiscussionHero['default'];
+        }, function (_flarumComponentsDiscussionList) {
+            DiscussionList = _flarumComponentsDiscussionList['default'];
         }, function (_flarumComponentsHeaderPrimary) {
             HeaderPrimary = _flarumComponentsHeaderPrimary['default'];
         }],
@@ -25,7 +25,6 @@ System.register('beeta-dev/ext-ads/main', ['flarum/extend', 'flarum/app', 'flaru
                 });
                 extend(WelcomeHero.prototype, 'init', function () {
                     var ads = '<div class="ads1" style="width:100%;text-align:center;margin: 0 0 10px 0;"><!-- Beeta 2.0 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3763973333557675" data-ad-slot="1731508684" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
-                    $(".Hero .container").prepend(ads);
                     setTimeout(function () {
                         if ($(".UserPage").html() == undefined) {
                             $(".Hero .container").prepend(ads);
@@ -35,9 +34,8 @@ System.register('beeta-dev/ext-ads/main', ['flarum/extend', 'flarum/app', 'flaru
                         }
                     }, 300);
                 });
-                extend(DiscussionHero.prototype, 'init', function () {
+                extend(DiscussionList.prototype, 'init', function () {
                     var ads = '<div class="ads1" style="width:100%;text-align:center;margin: 0 0 10px 0;"><!-- Beeta 2.0 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3763973333557675" data-ad-slot="1731508684" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
-                    $(".Hero .container").prepend(ads);
                     setTimeout(function () {
                         if ($(".UserPage").html() == undefined) {
                             $(".Hero .container").prepend(ads);
