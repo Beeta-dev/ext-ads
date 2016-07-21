@@ -12,17 +12,17 @@ app.initializers.add('beeta-dev-ext-ads', function() {
         }, 300);
     });
     extend(WelcomeHero.prototype, 'init', function() {
-        var ads = '<div class="ads1" style="width:100%;text-align:center;margin: 0 0 10px 0;"><!-- Beeta 2.0 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3763973333557675" data-ad-slot="1731508684" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
+        var ads1 = '<div class="ads1" style="width:100%;text-align:center;margin: 0 0 10px 0;"><!-- Beeta 2.0 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3763973333557675" data-ad-slot="1731508684" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
         setTimeout(function () {
-            if($(".UserPage").html()==undefined){ $(".WelcomeHero .container").prepend( ads ); }
-            if($(".TagsPage-nav").html()==undefined && $(".UserPage-nav").html()==undefined){ $(".sideNav").append( ads ); }
+            if($(".UserPage").html()==undefined){ $(".WelcomeHero .container").prepend( ads1 ); }
         }, 300);
     });
     extend(DiscussionList.prototype, 'init', function() {
-        var ads = '<div class="ads1" style="width:100%;text-align:center;margin: 0 0 10px 0;"><!-- Beeta 2.0 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3763973333557675" data-ad-slot="1731508684" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
+        var ads1 = '<div class="ads1" style="width:100%;text-align:center;margin: 0 0 10px 0;"><!-- Beeta 2.0 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3763973333557675" data-ad-slot="1731508684" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
+        var ads2 = '<div class="ads1" style="width:100%;text-align:center;margin: 0 0 10px 0;"><!-- Beeta 2.0 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3763973333557675" data-ad-slot="1731508684" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
         setTimeout(function () {
-            if($(".UserPage").html()==undefined && $(".WelcomeHero").html()==undefined){ $(".Hero .container").prepend( ads ); }
-            if($(".TagsPage-nav").html()==undefined && $(".UserPage-nav").html()==undefined){ $(".sideNav").append( ads ); }
+            if($(".UserPage").html()==undefined && $(".WelcomeHero").html()==undefined){ $(".Hero .container").prepend( ads1 ); }
+            if($(".TagsPage-nav").html()==undefined && $(".UserPage-nav").html()==undefined){ $(".sideNav").append( ads2 ); }
         }, 300);
     });
 });
